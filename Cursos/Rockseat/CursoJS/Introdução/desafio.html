@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>
+        Desafio Rocketseat JS
+    </title>
+</head>
+
+<body>
+    <script>
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        var anos = 7;
+        var usuarios = [{
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+        }, {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }];
+
+        console.log('O usuário mora em ' + endereco.cidade + ' / ' + endereco.uf + ', no bairro ' + endereco.bairro + ', na rua "' + endereco.rua + '" com nº ' + endereco.numero + '.');
+
+        function pares(x, y) {
+            var verifica = 0;
+            while (x <= y) {
+                verifica = x % 2;
+                if (verifica == 0) {
+                    console.log(x);
+                    x += 2;
+                } else {
+                    x += 1;
+                }
+            }
+        }
+
+        function temHabilidade(skills) {
+            var habil = skills.indexOf("Javascript", 0);
+            if (habil == 0) {
+                habil = true;
+                console.log(habil);
+            } else {
+                habil = false;
+                console.log(habil);
+            }
+        }
+
+        function experiencia(anos) {
+            if (anos == 0) {
+                console.log('Iniciante');
+            } else if (anos <= 2) {
+                console.log('Intermediário');
+            } else if (anos <= 6) {
+                console.log('Avançado');
+            } else if (anos >= 7) {
+                console.log('Jedi Master');
+            }
+        }
+
+        function apresentacao(usuarios) {
+            for (let usuario of usuarios) {
+                console.log("O " + usuario.nome + " possui as habilidades: " + usuario.habilidades.join(','));
+            }
+        }
+
+        pares(3, 10);
+        temHabilidade(skills);
+        experiencia(anos);
+        apresentacao(usuarios);
+    </script>
+</body>
+
+</html>
