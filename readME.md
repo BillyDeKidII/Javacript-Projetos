@@ -40,11 +40,12 @@
 ## Projeto Intermediário
 **Ambiente igual ao anterior com adição de recursos de** *live-reload e ultilização de multiplos arquivos js*
  - **Comandos do terminal**
+     - **`yarn add webpack -D`**
 	 - **`yarn add webpack-cli -D`**
 	 - **`yarn add babel-loader@8.0.0-beta.0`**
  - **Criação e alteração de arquivos**
 	 - Alterar arquivo *package.json* e atualize o valor "dev" dentro de "scripts":
-		 - ```"dev": "webpack --mode.development -w"```
+		 - ```"dev": "webpack --mode=development -w"```
 	 - Novo arquivo `.webpack.config.js` e adicione:
 ```javascript 
 module.exports = {
