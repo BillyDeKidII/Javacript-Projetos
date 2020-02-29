@@ -65,7 +65,7 @@ module.exports = {
 };
 ```
 ## Projeto Avançado
-**Ambiente igual aos anteriores com a adição de recursos de ** *servidor local, async and await e axios para uso de promises.*
+**Ambiente igual aos anteriores com a adição de recursos de** *servidor local, async and await e axios para uso de promises.*
  - **Comandos do terminal**
 	 - **`yarn add webpack-dev-server -D`**
 	 - **`yarn add @babel/plugin-transform-async-to-generator -D`**
