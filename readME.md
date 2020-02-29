@@ -12,7 +12,7 @@
 	 - **`yarn add @babel/core -D`**
 	 - **`yarn add @babel/plugin-proposal-object-rest-spread -D`**
  - **Criação e alteração de arquivos**
-	 - Novo arquivo *.gitignore* e adicione :
+	 - Novo arquivo `.gitignore` e adicione :
 		 - node_modules/
 	 - Novo arquivo `.babelrc` e adicione:
 		 - ``` {"presets": ["@babel/preset-env"],"plugins": ["@babel/plugin-proposal-object-rest-spread"]} ```
@@ -29,4 +29,31 @@
 <script src="./bundle.js"></script>
 </body>
 </html>
+```
+## Projeto Intermediário
+**Ambiente igual ao anterior com adição de recursos de** *live-reload.*
+ - **Comandos do terminal**
+	 - **`yarn add webpack-cli -D`**
+	 - **`yarn add babel-loader@8.0.0-beta.0`**
+ - **Criação e alteração de arquivos**
+	 - Alterar arquivo *package.json* e substitua dentro de "scripts":
+		 - ```"dev": "webpack --mode.development -w"```
+	 - Novo arquivo `.webpack.config.js` e adicione:
+```javascript 
+module.exports = {
+	entry:  './main.js',
+	output: {
+		path: __dirname,
+		filename:  'bundle.js'
+		},
+	module: {
+		rules: [{
+			test:  /\.js$/,
+			exclude:  /node_modules/,
+			use: {
+				loader:  'babel-loader',
+			}
+		}],
+	},
+};
 ```
