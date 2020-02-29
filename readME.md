@@ -38,7 +38,7 @@
 </html>
 ```
 ## Projeto Intermediário
-**Ambiente igual ao anterior com adição de recursos de** *live-reload.*
+**Ambiente igual ao anterior com adição de recursos de** *live-reload e ultilização de multiplos arquivos js*
  - **Comandos do terminal**
 	 - **`yarn add webpack-cli -D`**
 	 - **`yarn add babel-loader@8.0.0-beta.0`**
